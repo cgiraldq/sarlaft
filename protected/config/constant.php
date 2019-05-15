@@ -6,7 +6,7 @@ define('APPLICATION','Sarlaft');
 //define('INSTANCE','10.158.117.84');
 define('INSTANCE','localhost');
 define('DB','dbsarlaft');
-define('DB_USER','root');
+define('DB_USER','cgiraldq');
 define('DB_PASS','08108217');
 //profile path
 define('DIRPATH', $_SERVER['DOCUMENT_ROOT']); 
