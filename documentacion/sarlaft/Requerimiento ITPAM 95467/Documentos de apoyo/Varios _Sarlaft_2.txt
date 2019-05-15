@@ -1,0 +1,30 @@
+Paula Suaza solicita:
+Mayo 19 de 2015
+
+Cambio SARLAFT
+
+•Ya no iremos con la Implementación automática de consultas a listas ONU y  OFAC. Servicio de Consulta en linea(WS): 
+Expone y permite validar el servicio de consulta a listas ONU y OFAC. 
+
+Se solicita que este servicio se supla con Consulta en Batch: 
+Pregunta se descargan los listados todas las noches, se guardan en memoria? 
+Todas las noches a todo el set de datos coleccionados entre TIGO-UNE y las filiales,
+con la foto de las solicitudes ingresadas ese día, la cual será consultada en línea por los diferentes usuarios del sistema.  
+Ejemplo: 
+todas los noches se toma foto de lo ingresado independiente del estado
+Preguntas: 
+La foto de lo ingresado es por filial, por sistema(crm, proveedores, empleados etc.)?
+Donde quedara lo ingresado, queda consolidado por filial en algun archivo?
+ 
+Hora propuesta: las 3am, y al dia siguiente lo mismo.
+Pregunta: se ejecuta todos los dias, incluyendo domingos y festivos?
+ 
+el resultado de la coincidencia seria dejado en un reporte de coincidencias con los campos que requerimos.
+
+Se genera una lista de coincidencias en base de datos.
+Pregunta: se continua guardando los Logs de las consultas segun la solicitud inicial?
+
+
+USANDO ROC:
+ver el documento.
+

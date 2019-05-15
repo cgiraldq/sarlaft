@@ -1,0 +1,89 @@
+/**SOLO PARA LA GRID CON BOOSTRAP*/
+.ui-jqgrid .ui-jqgrid-caption {
+    color: #fff;
+}
+.gridInputFind{
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    border-radius: 4px;
+    color: #555555;
+    display: inline-block;
+    font-size: 14px;
+    height: 18px !important;
+    line-height: 20px;
+    margin-bottom: 10px;
+    padding: 1px 1px;
+    vertical-align: middle;
+}
+
+.ui-jqgrid-view label,
+.ui-jqgrid-view input,
+.ui-jqgrid-view button,
+.ui-jqgrid-view select,
+.ui-jqgrid-view textarea {
+  font-size: 14px !important;
+  font-weight: normal !important;
+}
+
+.ui-jqgrid-view select,
+.ui-jqgrid-view textarea,
+.ui-jqgrid-view input[type="text"],
+.ui-jqgrid-view input[type="password"],
+.ui-jqgrid-view input[type="datetime"],
+.ui-jqgrid-view input[type="datetime-local"],
+.ui-jqgrid-view input[type="date"],
+.ui-jqgrid-view input[type="month"],
+.ui-jqgrid-view input[type="time"],
+.ui-jqgrid-view input[type="week"],
+.ui-jqgrid-view input[type="number"],
+.ui-jqgrid-view input[type="email"],
+.ui-jqgrid-view input[type="url"],
+.ui-jqgrid-view input[type="search"],
+.ui-jqgrid-view input[type="tel"],
+.ui-jqgrid-view input[type="color"],
+.ui-jqgrid-view .uneditable-input {
+  padding: 0px 0px !important;
+}
+
+
+.ui-jqgrid .ui-pg-input {
+    width: auto !important;
+    height: auto !important;
+    
+}
+.ui-jqgrid tr.jqgrow td {
+    min-height: 22px !important;
+    height: auto !important;
+    white-space: normal !important;
+}
+.ui-jqgrid-view select,
+.ui-jqgrid-view input[type="file"] {
+  height: 20px !important;
+  /* In IE7, the height of the select element cannot be changed by height, only font-size */
+
+  *margin-top: 1px !important;
+}
+.ui-jqgrid-view select {
+  width: auto !important;
+}
+
+.ui-jqgrid-view .input-append .add-on,
+.ui-jqgrid-view .input-prepend .add-on {
+  height: 14px !important;
+}
+
+.ui-jqgrid-htable table td, 
+.ui-jqgrid-htable table th {
+    padding: 1px 0px 0px 2px !important;
+}
+
+.ui-jqgrid-view table {
+    border-collapse: unset !important;
+}
+.ui-jqgrid .ui-pg-table td {
+    vertical-align: middle !important;
+	 text-align: -moz-center !important;
+}
+/**FIN - SOLO PARA LA GRID CON BOOSTRAP*/

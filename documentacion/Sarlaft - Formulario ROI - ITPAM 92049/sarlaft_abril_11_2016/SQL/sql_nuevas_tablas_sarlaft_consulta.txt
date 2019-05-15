@@ -1,0 +1,81 @@
+--
+-- Creacion de nuevas tablas
+--
+
+DROP TABLE IF EXISTS `tbl_formulario_consulta`;
+CREATE TABLE `tbl_formulario_consulta` (
+  `consulta_id` int(10) NOT NULL AUTO_INCREMENT,
+  `consulta_tipo_identificacion_id` int(10) DEFAULT NULL,
+  `consulta_identificacion_persona` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `consulta_nombre_persona` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `consulta_fecha` date DEFAULT NULL,
+  `consulta_usuario` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `consulta_prueba` tinyint(1) DEFAULT NULL,
+  `consulta_ip` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `consulta_usuario_id` int(10) DEFAULT NULL,
+  `creadopor` int(10) DEFAULT NULL,
+  `fechacreacion` datetime DEFAULT NULL,
+  `modificadopor` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fechamodificacion` datetime DEFAULT NULL,
+  `consulta_visitante` text COLLATE utf8_unicode_ci,
+  PRIMARY KEY (`consulta_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=109 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+
+DROP TABLE IF EXISTS `tbl_permisos_formulario_consulta`;
+CREATE TABLE `tbl_permisos_formulario_consulta` (
+  `id_permiso` int(11) NOT NULL AUTO_INCREMENT,
+  `login_usuario` varchar(40) NOT NULL,
+  `empresa` varchar(40) DEFAULT NULL,
+    `creadopor` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fechacreacion` datetime DEFAULT NULL,
+  `modificadopor` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fechamodificacion` datetime DEFAULT NULL,
+  PRIMARY KEY (`id_permiso`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+
+
+--
+-- Datos nuevos reportes
+--
+INSERT IGNORE INTO `tbl_reports` VALUES (77, 'Reporte Consultas Sarlaft', 'Reporte Consultas Sarlaft', NULL, NULL, 'tbl_formulario_consulta', 'consulta_id', NULL, NULL, 1, 1, 1, 99, 1, 1, 0, 0, NULL, 1, 'cgiraldq', '2016-03-28 08:11:30', 'cgiraldq', '2016-03-28 08:13:12');
+INSERT IGNORE INTO `tbl_reports` VALUES (78, 'Usuarios Consultas Sarlaft', 'Usuarios Consultas Sarlaft', NULL, NULL, 'tbl_permisos_formulario_consulta', 'id_permiso', NULL, NULL, 1, 1, 1, 99, 1, 1, 0, 0, NULL, 1, 'cgiraldq', '2016-03-28 08:11:30', 'cgiraldq', '2016-03-28 08:13:12');
+
+
+--
+-- Datos nuevos campos de reportes
+--
+DELETE FROM `tbl_reports_fields` WHERE report_id = 77;
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 77, 'tbl_formulario_consulta', 'consulta_usuario', 'consulta_usuario', 'Usuario', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 7, 190, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '', 'admin', '');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 77, 'tbl_formulario_consulta', 'fechacreacion', 'fechacreacion', 'Fecha Consulta', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 7, 190, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '', 'admin', '');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 77, 'tbl_formulario_consulta', 'consulta_ip', 'consulta_ip', 'Usuario IP', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 7, 190, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '', 'admin', '');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 77, 'tbl_formulario_consulta', 'consulta_identificacion_persona', 'consulta_identificacion_persona', 'Idetificación Consultada', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 7, 190, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '', 'admin', '');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 77, 'tbl_formulario_consulta', 'consulta_nombre_persona', 'consulta_nombre_persona', 'Nombre Consultado', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 7, 190, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '', 'admin', '');
+
+
+DELETE FROM `tbl_reports_fields` WHERE report_id = 78;
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 78, 'tbl_permisos_formulario_consulta', 'login_usuario', 'login_usuario', 'Login', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 7, 190, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '', 'admin', '');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 78, 'tbl_permisos_formulario_consulta', 'empresa', 'empresa', 'Filial', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 7, 190, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '', 'admin', '');
+
+--
+-- Datos nuevos permisos reportes
+--
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL,'77','administrador','1','1','1','1','1','1','1','1','cgiraldq','2.016-03-28 00:23:18','cgiraldq','2016-03-28 00:23:33');
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL,'77','superadminsarlaft','1','1','1','1','1','1','1','1','cgiraldq','2016-03-28 00:23:18','cgiraldq','2016-03-28 00:23:33');
+
+
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL,'78','administrador','1','1','1','1','1','1','1','1','cgiraldq','2016-03-28 00:23:18','cgiraldq','2016-03-28 00:23:33');
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL,'78','superadminsarlaft','1','1','1','1','1','1','1','1','cgiraldq','2016-03-28 00:23:18','cgiraldq','2016-03-28 00:23:33'); 
+
+--
+-- Datos nuevos menu
+--
+
+
+INSERT INTO `tbl_menu` VALUES (NULL, '1', '101', null, 'administration', '3', 'Reporte Consultas Sarlaft', 'Lista de consultas realizadas a sarlaft ', null, '0', '0', 'boton_menu', 'pagina', null, null, null, null, null, '?r=GridAdmin/GridAutomatic&report_id=77', null, '', null, null, null, null, null, null, null, null, 'si', 'si', null, 'gridautomatic', 'gridadmin', 'cgiraldq', '2016-03-28 16:15:47', 'cgiraldq', '2016-03-28 18:16:50');
+INSERT INTO `tbl_menu` VALUES (NULL, '1', '101', null, 'administration', '3', 'Usuarios Consulta Sarlaft', 'Usuarios permitidos en consulta sarlaft', null, '0', '0', 'boton_menu', 'pagina', null, null, null, null, null, '?r=GridAdmin/GridAutomatic&report_id=78', null, '', null, null, null, null, null, null, null, null, 'si', 'si', null, 'gridautomatic', 'gridadmin', 'cgiraldq', '2016-03-28 16:15:47', 'cgiraldq', '2016-03-28 18:16:50');
+
+
+

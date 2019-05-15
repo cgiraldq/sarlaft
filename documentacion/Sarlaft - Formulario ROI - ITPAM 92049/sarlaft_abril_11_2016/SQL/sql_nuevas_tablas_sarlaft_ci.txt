@@ -1,0 +1,73 @@
+--
+-- Creacion de nuevas tablas
+--
+DROP TABLE IF EXISTS `tbl_formulario_fci`;
+CREATE TABLE IF NOT EXISTS `tbl_formulario_fci` (
+  `fci_id` int(10) NOT NULL AUTO_INCREMENT,
+  `fci_radicado` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `fci_empresa_id` int(10) DEFAULT NULL,
+  `fci_tipo_identificacion_id` int(10) DEFAULT NULL,
+  `fci_identificacion_persona` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `fci_nombre_persona` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `fci_pais_id` int(10) DEFAULT NULL,
+  `fci_departamento_id` int(10) DEFAULT NULL,
+  `fci_ciudad_id` int(10) DEFAULT NULL,
+  `fci_email` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fci_telefono` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fci_existe_conflicto` tinyint(1) DEFAULT NULL,
+  `fci_nombre_persona_conflicto` varchar(259) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fci_tipo_identificacion_persona_conflicto_id` int(10) DEFAULT NULL,
+  `fci_identificacion_persona_conflicto` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `fci_parentesco` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `fci_nombre_empresa_conflicto` varchar(259) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fci_identificacion_empresa_conflicto` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fci_actividad_empresa_conflicto` varchar(259) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fci_declaracion_conflicto` text COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fci_fecha_declaracion` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `fci_estado_id` int(10) DEFAULT NULL,
+  `fci_usuario` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fci_prueba` tinyint(1) DEFAULT NULL,
+  `fci_ip` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fci_usuario_id` int(10) DEFAULT NULL,
+  `creadopor` int(10) DEFAULT NULL,
+  `fechacreacion` datetime DEFAULT NULL,
+  `modificadopor` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fechamodificacion` datetime DEFAULT NULL,
+  `fci_visitante` text COLLATE utf8_unicode_ci,
+  PRIMARY KEY (`fci_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+
+--
+-- Datos nuevos reportes
+--
+INSERT IGNORE INTO `tbl_reports` VALUES (74, 'Reporte Conflicto de Intereses', 'Reporte Conflicto de Intereses', NULL, NULL, 'tbl_formulario_fci', 'fci_id', NULL, NULL, 1, 1, 1, 99, 1, 1, 0, 0, NULL, 1, 'jcadag', '2015-12-28 08:11:30', 'jcadag', '2015-12-28 08:13:12');
+
+
+--
+-- Datos nuevos campos de reportes
+--
+DELETE FROM `tbl_reports_fields` WHERE report_id = 74;
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 74, 'tbl_formulario_fci', 'fci_nombre_persona', 'fci_nombre_persona', 'Persona', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 7, 190, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-25 01:05:25', 'admin', '2015-4-16 23:45:10');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 74, 'tbl_formulario_fci', 'fci_radicado', 'fci_radicado', 'Radicado', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 1, 120, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-25 01:05:25', 'admin', '2015-4-19 02:38:10');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 74, 'tbl_formulario_fci', 'fci_empresa_id', 'fci_empresa_id', 'Empresa', '', '', 10, '', 'select emp_id, emp_nombre from tbl_empresa', 'emp_id', 'emp_nombre', 0, '', 'tbl_empresa', 'emp_id', 'emp_nombre', 'select emp_id, emp_nombre from tbl_empresa', 'eq', '', 0, 1, '', 0, 0, 2, 100, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-30 11:19:35', 'admin', '2015-4-9 01:34:20');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 74, 'tbl_formulario_fci', 'fci_ciudad_id', 'fci_ciudad_id', 'Ciudad', '', '', 10, '', 'select ciu_id, ciu_nombre from tbl_ciudad', 'ciu_id', 'ciu_nombre', 0, '', 'tbl_ciudad', 'ciu_id', 'ciu_nombre', 'select ciu_id, ciu_nombre from tbl_ciudad', 'eq', '', 0, 1, '', 0, 0, 9, 120, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-30 11:25:34', 'admin', '2015-4-27 11:02:43');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 74, 'tbl_formulario_fci', 'fci_estado_id', 'fci_estado_id', 'Estado', '', '', 10, '', 'select est_id, est_nombre from tbl_estado', 'est_id', 'est_nombre', 0, '', 'tbl_estado', 'est_id', 'est_nombre', 'select est_id, est_nombre from tbl_estado', 'eq', '', 0, 1, '', 0, 0, 0, 100, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-30 11:36:21', 'admin', '2015-4-9 01:34:49');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 74, 'tbl_formulario_fci', 'fci_fecha_declaracion', 'fci_fecha_declaracion', 'Fecha declaracion', '', 'left', 5, '', '', '', '', 0, '', '', '', '', '', '', '', 0, 1, '', 0, 0, 20, 90, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-30 11:52:16', 'admin', '2015-3-30 14:28:35');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 74, 'tbl_formulario_fci', 'fci_email', 'fci_email', 'Email', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 7, 190, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-25 01:05:25', 'admin', '2015-4-16 23:45:10');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 74, 'tbl_formulario_fci', 'fci_telefono', 'fci_telefono', 'Telefono', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 7, 190, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-25 01:05:25', 'admin', '2015-4-16 23:45:10');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 74, 'tbl_formulario_fci', 'fci_existe_conflicto', 'fci_existe_conflicto', 'Existe conflicto', '', '', 3, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 3, 90, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-03-30 14:55:40', 'admin', '2015-04-19 02:39:42');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 74, 'tbl_formulario_fci', 'fci_declaracion_conflicto', 'fci_declaracion_conflicto', 'Declaracion', '', '', 17, '', '', '', '', 0, '', '', '', '', '', '', '', 0, 1, '', 0, 0, 19, 150, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-30 16:54:09', 'admin', '2015-4-19 21:14:27');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 74, 'tbl_formulario_fci', 'fci_tipo_identificacion_id', 'fci_tipo_identificacion_id', 'Tipo Identificación declarante', '', '', 10, '', 'select tid_id, tid_nombre from tbl_tipo_identificacion', 'tid_id', 'tid_nombre', 0, '', 'tbl_tipo_identificacion', 'tid_id', 'tid_nombre', 'select tid_id, tid_nombre from tbl_tipo_identificacion', 'eq', '', 0, 1, '', 0, 0, 5, 150, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-03-25 01:05:25', 'admin', '2015-03-30 15:57:09');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 74, 'tbl_formulario_fci', 'fci_identificacion_persona', 'fci_identificacion_persona', 'Identificación declarante', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 6, 170, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-03-25 01:05:25', 'admin', '2015-03-30 15:57:15');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 74, 'tbl_formulario_fci', 'fci_tipo_identificacion_persona_conflicto_id', 'fci_tipo_identificacion_persona_conflicto_id', 'Tipo Identificación persona conflicto', '', '', 10, '', 'select tid_id, tid_nombre from tbl_tipo_identificacion', 'tid_id', 'tid_nombre', 0, '', 'tbl_tipo_identificacion', 'tid_id', 'tid_nombre', 'select tid_id, tid_nombre from tbl_tipo_identificacion', 'eq', '', 0, 1, '', 0, 0, 5, 150, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-03-25 01:05:25', 'admin', '2015-03-30 15:57:09');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 74, 'tbl_formulario_fci', 'fci_identificacion_persona_conflicto', 'fci_identificacion_persona_conflicto', 'Identificación persona conflicto', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 6, 170, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-03-25 01:05:25', 'admin', '2015-03-30 15:57:15');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 74, 'tbl_formulario_fci', 'fci_nombre_persona_conflicto', 'fci_nombre_persona_conflicto', 'Persona conflicto', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 7, 190, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-25 01:05:25', 'admin', '2015-4-16 23:45:10');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 74, 'tbl_formulario_fci', 'fci_parentesco', 'fci_parentesco', 'Parentesco', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 7, 190, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-25 01:05:25', 'admin', '2015-4-16 23:45:10');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 74, 'tbl_formulario_fci', 'fci_identificacion_empresa_conflicto', 'fci_identificacion_empresa_conflicto', 'Rut - Nit empresa relacionada', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 6, 170, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-03-25 01:05:25', 'admin', '2015-03-30 15:57:15');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 74, 'tbl_formulario_fci', 'fci_nombre_empresa_conflicto', 'fci_nombre_empresa_conflicto', 'Empresa conflicto', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 7, 190, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-25 01:05:25', 'admin', '2015-4-16 23:45:10');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 74, 'tbl_formulario_fci', 'fci_actividad_empresa_conflicto', 'fci_actividad_empresa_conflicto', 'Actividad empresa', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 7, 190, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-25 01:05:25', 'admin', '2015-4-16 23:45:10');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 74, 'tbl_formulario_fci', 'fci_visitante', 'fci_visitante', 'Datos visitante', '', '', 17, '', '', '', '', NULL, '', '', '', '', '', '', '', 0, 1, '', 0, 0, 40, 120, 0, 0, 0, '', '', '', '', '', '', '', 0, '', 'admin', '2015-4-21 12:15:35', '', '0000-0-0 00:00:00');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 74, 'tbl_formulario_fci', 'fechacreacion', 'fechacreacion', 'Fecha registro', '', 'left', 2, '', '', '', '', 0, '', '', '', '', '', '', 'ASC', 0, 1, '', 0, 0, 1, 90, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-4-21 12:41:32', 'admin', '2015-4-21 14:16:42');
+

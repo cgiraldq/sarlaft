@@ -1,0 +1,58 @@
+
+
+Proyecto: Aplicación SARLAFT
+Área: Vicepresidencia  Auditoria(John Jairo Vasquez)
+
+Requerimiento: ITPAM 95467
+OC 1079439
+
+Fecha llegada: Marzo 16 de 2015
+
+BRM
+Juan Carlos Rios  
+Tel. 5158330 
+Cel. 3006772574
+
+Dueña del Requerimiento
+Paula Andrea Suaza:  Ext. 8019
+
+Arquitectura
+Jimmy Romero Alvis
+Tel: 5155708
+
+Equipo de William Viana
+Apoyo Julian Andres Velez
+El nos apoya con los temas de base de datos y de infraestructura.
+
+Apoyo Equipo Contenidos
+John Mario Cadavid
+Tel. 3828069
+Cel. 3136484469
+
+Equipo Seguridad
+Matha Lucia Duque Ramirez
+
+Integraciones
+CRMS y Otros, YA NO VA por control de cambio
+
+Fenix: Maria Girlesa
+Siebel: Luz Adriana Tello
+Elite: Gilberto Ciro
+SAP: Monica Bibiana
+
+
+____________________________________________________________________________________________
+
+Reunion cpn Jimmy Romero
+Proyecto: SARLAFT
+
+ROC: (Risk Of Client) a traves de fenix integracion sincrona. 
+
+
+ 
+
+
+
+
+
+

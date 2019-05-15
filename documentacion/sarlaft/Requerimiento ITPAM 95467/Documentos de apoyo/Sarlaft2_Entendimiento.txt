@@ -1,0 +1,131 @@
+SARLAFT
+
+ITPAM 95467
+
+OC 1079439
+
+Grupos de apoyo solicitados:
+
+Grupo ED IDC Almacenamiento Responsable diseño
+
+Grupo ED IDC Aplicaciones Responsable diseño y DEspliegue
+
+Grupo ED IDC Bases de datos Responsable diseño y DEspliegue
+
+Grupo ED IDC Networking Responsable
+
+Grupo PA Oficina de Arquitectura TI Responsable de Diseño
+
+Grupo Seguridad Responsable diseño
+
+_____________________________________________________________________________________________________________
+Seguimiento
+Jorge Mario, Paula Suaza, Juan Carlos Rios, alberto Iral 
+
+
+-Transpararencia como proceso.
+-se cae roc 
+-HOy solo inclye a Fenix o Siebel?
+-Se requiere que sea con tosdo slos CRM.
+-Se requiere que integrar todas la filiales(Tigo, Orbitel, Edatel, Emtelco).
+-Los ingresos de ventas manuales no los incluye ROC.
+
+-ROC solo integra a un CRM, Siebel.
+-ROC hoy no incluye al 100% clientes.
+-ROC solo incluye el modulo de fraudes.
+-Saralaft requiere integrar en esta etapa a todos los CRM.
+-ROC no integra hoya las filiales, Tigo, EMtelco, Edatel, Orbitel.
+
+
+
+___________________________________________________________________________________________________
+
+Se debe homologar a un solo formato de archivo con los respectivos campos, para que cada filial en una fecha especifica los suba via FTP al recurso de NAS.
+
+apoyo de Paula suaza
+
+
+Se define una estructura en NAS, sobre la cual se subiran via FTP los archivos asi:
+
+net-file/sarlaft/filial1
+net-file/sarlaft/filial2
+.
+.
+net-file/sarlaft/filialn
+
+
+Espacio en disco? 
+
+
+Nombre archivo que subiriran las  filiales:
+
+Filial_YY/MM/DD:HH.MM:SS.CSV
+Ejemplo: Tigo_2015/03/24:04:32:59.CSV
+
+
+Luego de la consulta 
+transformalo a un .log, el cual ser< consultado desde una interfase
+
+Filial_YY/MM/DD:HH.MM:SS.log
+Ejemplo: Tigo_2015/03/24:04:32:59.log
+
+campos de Log
+
+
+Fecha|hora|filial|listaConsulta(OFAC:ONU)|coincidencia|score|documento|nombre|ciudad|direccion|
+
+
+Sistema que consultó: origina la consulta
+Lista a la que consultó: OFAC, ONU
+repuesta de coincidencia (SI - si estaba en la lista) y (No. si no estaba en lista)
+valor del Score: porcentaje
+Pedido o consecutivo entregado por el sistema:
+Identificación del cliente: documento(CC, NIT, Pasaporte)
+nombre del cliente:
+Dirección:
+Ciudad:
+Representante Legal:
+Identificación del Representante legal: documento(CC, NIT, Pasaporte)
+Estado del servicio:
+Productos:
+
+
+Resultado de la ejecucion, va a la carpeta de NAS: :
+
+Cantidad Registros : 200.000
+Fecha:Hora:ejecucion:
+fecha:hora:finalizacion:
+
+Luego de la ejecucion el archivo quedara guardado en NAS asi:
+net-file/sarlaft/Ejecutados
+_____________________________________________________________________________________________________
+
+Solicitar a Jimmy Romero datos tecnicos de servidor de MS Integration Services.
+
+Nombre de servidor
+IP Server
+Puerto 
+Vlan
+_____________________________________________________________________________________________________
+
+Verifiar si las carpetas ya existen por cada filial, si no existe entonces:
+
+Solicitar cracion de carpetas para las filiales asi:
+
+Solicitar permisos al usuario en carpeta para escribir, borrar, editar. 
+
+Edatel: 40MB
+Emtelco: 40MB
+ETP: 40MB
+Orbitel: 40MB
+TigoUne: 40MB
+
+
+Solicitar espacio en disco NET-FILE entornos desarrollo y pruebas(tengo entendido que estan juntos estos ambietnes), produccion.
+
+desarrollo - pruebas: 200 MB
+Produccion: 1GB
+
+Mas infomacion con Magda Martinez sobre las cuentas tecnicas de cada filial y usuarios por filial.
+_____________________________________________________________________________________________________
+

@@ -1,0 +1,75 @@
+h1 {
+	font-size: 22px !important;
+}
+#roi-form {
+
+	width: 500px;
+	padding: 20px;
+	background: #f0f0f0;
+	overflow:auto;
+ 
+	/* Border style */
+	border: 1px solid #cccccc;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px; 
+ 
+	/* Border Shadow */
+	-moz-box-shadow: 2px 2px 2px #cccccc;
+	-webkit-box-shadow: 2px 2px 2px #cccccc;
+	box-shadow: 2px 2px 2px #cccccc;
+ 
+}
+
+p {
+	font-family: Arial, Verdana;
+	display: block;
+	font-weight: bold;
+	display: inline-block;
+	width: auto;
+	text-align: left;
+	line-height: 25px;
+	font-size: 14px;
+	padding: 14px 2px 7px 7px;
+}
+
+label {
+	font-family: Arial, Verdana;
+	text-shadow: 1px 1px 1px #ccc;
+	display: block;
+	float: left; margin-right:15px;
+	font-weight: normal;
+	margin-right:10px;
+	text-align: right;
+	width: 240px;
+	line-height: 25px;
+	font-size: 14px;
+}
+
+.hint{
+	display:none;
+}
+
+.field:hover .hint {
+	position: absolute;
+	display: block;
+	margin: -30px 0 0 455px;
+	color: #FFFFFF;
+	padding: 7px 10px;
+	background: rgba(0, 0, 0, 0.6);
+ 
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+}
+
+.buttons {
+	display: block;
+	font-weight: bold; 
+	padding: 16px 10px;
+	cursor:pointer;
+	color: #fff;
+ 
+	text-align: center;
+	text-shadow: 0 -1px 1px #64799e;
+ }			

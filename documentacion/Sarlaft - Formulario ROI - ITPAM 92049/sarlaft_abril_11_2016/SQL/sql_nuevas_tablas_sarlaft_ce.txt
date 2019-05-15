@@ -1,0 +1,67 @@
+--
+-- Creacion de nuevas tablas
+--
+DROP TABLE IF EXISTS `tbl_formulario_fce`;
+CREATE TABLE IF NOT EXISTS `tbl_formulario_fce` (
+  `fce_id` int(10) NOT NULL AUTO_INCREMENT,
+  `fce_radicado` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `fce_empresa_id` int(10) DEFAULT NULL,
+  `fce_tipo_identificacion_id` int(10) DEFAULT NULL,
+  `fce_identificacion_persona` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `fce_nombre_persona` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `fce_vicepresidencia` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fce_area` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fce_cargo` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fce_pais_id` int(10) DEFAULT NULL,
+  `fce_departamento_id` int(10) DEFAULT NULL,
+  `fce_ciudad_id` int(10) DEFAULT NULL,
+  `fce_email` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fce_telefono` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fce_fecha_declaracion` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `fce_estado_id` int(10) DEFAULT NULL,
+  `fce_usuario` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fce_prueba` tinyint(1) DEFAULT NULL,
+  `fce_ip` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fce_usuario_id` int(10) DEFAULT NULL,
+  `creadopor` int(10) DEFAULT NULL,
+  `fechacreacion` datetime DEFAULT NULL,
+  `modificadopor` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fechamodificacion` datetime DEFAULT NULL,
+  `fce_visitante` text COLLATE utf8_unicode_ci,
+  PRIMARY KEY (`fce_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+
+--
+-- Datos nuevos reportes
+--
+INSERT IGNORE INTO `tbl_reports` VALUES (76, 'Reporte Codigo Etica', 'Reporte Codigo  Etica', NULL, NULL, 'tbl_formulario_fce', 'fce_id', NULL, NULL, 1, 1, 1, 99, 1, 1, 0, 0, NULL, 1, 'cgiraldq', '2015-12-28 08:11:30', 'cgiraldq', '2015-12-28 08:13:12');
+
+
+--
+-- Datos nuevos campos de reportes
+--
+DELETE FROM `tbl_reports_fields` WHERE report_id = 76;
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 76, 'tbl_formulario_fce', 'fce_nombre_persona', 'fce_nombre_persona', 'Persona', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 7, 190, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-25 01:05:25', 'admin', '2015-4-16 23:45:10');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 76, 'tbl_formulario_fce', 'fce_vicepresidencia', 'fce_vicepresidencia', 'Vicepresidencia', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 4, 190, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-25 01:05:25', 'admin', '2015-4-16 23:45:10');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 76, 'tbl_formulario_fce', 'fce_area', 'fce_area', 'Area', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 4, 190, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-25 01:05:25', 'admin', '2015-4-16 23:45:10');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 76, 'tbl_formulario_fce', 'fce_cargo', 'fce_cargo', 'Cargo', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 4, 190, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-25 01:05:25', 'admin', '2015-4-16 23:45:10');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 76, 'tbl_formulario_fce', 'fce_radicado', 'fce_radicado', 'Radicado', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 1, 120, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-25 01:05:25', 'admin', '2015-4-19 02:38:10');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 76, 'tbl_formulario_fce', 'fce_empresa_id', 'fce_empresa_id', 'Empresa', '', '', 10, '', 'select emp_id, emp_nombre from tbl_empresa', 'emp_id', 'emp_nombre', 0, '', 'tbl_empresa', 'emp_id', 'emp_nombre', 'select emp_id, emp_nombre from tbl_empresa', 'eq', '', 0, 1, '', 0, 0, 2, 100, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-30 11:19:35', 'admin', '2015-4-9 01:34:20');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 76, 'tbl_formulario_fce', 'fce_ciudad_id', 'fce_ciudad_id', 'Ciudad', '', '', 10, '', 'select ciu_id, ciu_nombre from tbl_ciudad', 'ciu_id', 'ciu_nombre', 0, '', 'tbl_ciudad', 'ciu_id', 'ciu_nombre', 'select ciu_id, ciu_nombre from tbl_ciudad', 'eq', '', 0, 1, '', 0, 0, 9, 120, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-30 11:25:34', 'admin', '2015-4-27 11:02:43');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 76, 'tbl_formulario_fce', 'fce_estado_id', 'fce_estado_id', 'Estado', '', '', 10, '', 'select est_id, est_nombre from tbl_estado', 'est_id', 'est_nombre', 0, '', 'tbl_estado', 'est_id', 'est_nombre', 'select est_id, est_nombre from tbl_estado', 'eq', '', 0, 1, '', 0, 0, 0, 100, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-30 11:36:21', 'admin', '2015-4-9 01:34:49');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 76, 'tbl_formulario_fce', 'fce_fecha_declaracion', 'fce_fecha_declaracion', 'Fecha declaracion', '', 'left', 5, '', '', '', '', 0, '', '', '', '', '', '', '', 0, 1, '', 0, 0, 20, 90, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-30 11:52:16', 'admin', '2015-3-30 14:28:35');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 76, 'tbl_formulario_fce', 'fce_email', 'fce_email', 'Email', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 7, 190, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-25 01:05:25', 'admin', '2015-4-16 23:45:10');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 76, 'tbl_formulario_fce', 'fce_telefono', 'fce_telefono', 'Telefono', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 7, 190, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-25 01:05:25', 'admin', '2015-4-16 23:45:10');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 76, 'tbl_formulario_fce', 'fce_tipo_identificacion_id', 'fce_tipo_identificacion_id', 'Tipo Identificación declarante', '', '', 10, '', 'select tid_id, tid_nombre from tbl_tipo_identificacion', 'tid_id', 'tid_nombre', 0, '', 'tbl_tipo_identificacion', 'tid_id', 'tid_nombre', 'select tid_id, tid_nombre from tbl_tipo_identificacion', 'eq', '', 0, 1, '', 0, 0, 5, 150, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-03-25 01:05:25', 'admin', '2015-03-30 15:57:09');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 76, 'tbl_formulario_fce', 'fce_identificacion_persona', 'fce_identificacion_persona', 'Identificación declarante', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 6, 170, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-03-25 01:05:25', 'admin', '2015-03-30 15:57:15');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 76, 'tbl_formulario_fce', 'fce_visitante', 'fce_visitante', 'Datos visitante', '', '', 17, '', '', '', '', NULL, '', '', '', '', '', '', '', 0, 1, '', 0, 0, 40, 120, 0, 0, 0, '', '', '', '', '', '', '', 0, '', 'admin', '2015-4-21 12:15:35', '', '0000-0-0 00:00:00');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 76, 'tbl_formulario_fce', 'fechacreacion', 'fechacreacion', 'Fecha registro', '', 'left', 2, '', '', '', '', 0, '', '', '', '', '', '', 'ASC', 0, 1, '', 0, 0, 1, 90, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-4-21 12:41:32', 'admin', '2015-4-21 14:16:42');
+
+--
+-- Datos nuevos permisos reportes
+--
+INSERT INTO `tbl_reports_permissions_roles` VALUES ('112','76','administrador','1','1','1','1','1','1','1','1','jcadag','2016-01-12 00:23:18','jcadag','2016-01-12 00:23:33');
+INSERT INTO `tbl_reports_permissions_roles` VALUES ('113','76','superadminsarlaft','1','1','1','1','1','1','1','1','jcadag','2016-01-12 00:23:18','jcadag','2016-01-12 00:23:33');
+INSERT INTO `tbl_reports_permissions_roles` VALUES ('114','76','autorizado','1','1','1','1','1','1','1','1','jcadag','2016-01-12 00:23:18','jcadag','2016-01-12 00:23:33');

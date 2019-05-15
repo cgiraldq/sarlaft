@@ -1,0 +1,212 @@
+        hr{
+			height: 3px;
+			background: #00377B;
+		}
+		
+		table {
+            height: 70px;
+            font-size: 40px;
+			width: 100%;
+			color: #707682;
+        }
+		td strong{
+			font-size: 40px;
+			color: #000;
+		}
+			td a{
+			text-decoration: none;
+			color: #000;
+			
+		}
+		td a:hover{
+			text-decoration: none;
+			color: #00C8FF;
+			
+		}
+        button {
+            font-size: 25px;
+        }
+        td {
+            vertical-align: top;
+           
+			text-align: center;
+        }
+        #div_mapa {
+            height: 450px;
+            width: 100%;
+            margin: 0 auto;
+        }
+		 #img img{
+			width: 50% !important;
+    HEIGHT: auto; 
+		  }
+		  #img{
+			  height: 50%;
+    display: block;
+    margin: 0 auto;
+    width: auto;
+		  }
+        #info_content {
+            font-size: 25px;
+            height: 100px;
+			width: 100%;
+        }
+		#info_content strong{
+            font-size: 40px;
+		}
+        #div_left, #div_center, #div_right {
+            float: left;
+            height: 70px;
+            height: 100%;
+        }
+        #div_left, #div_right {
+            width: 50%
+        }
+        #div_left img, #div_right img {
+            padding-top: 15px;
+        }
+        #div_left {
+            text-align: center;
+            background-color: #fff;
+        }
+        #div_center {
+            text-align: center;
+            width: 60%;
+        }
+        #div_right {
+            text-align: center;
+		}
+		
+		#info{
+			width: 100%;
+		}
+		
+		#panel_info{
+			text-align: center;
+			font-size: 28px;
+			color: #707682;
+		}
+		#info_marker{
+			background: #00377B;
+			color: #fff;
+			/* text-shadow: -2px -2px 1px #00C8FF, 2px 2px 1px #00C8FF, -2px -2px 1px #00C8FF, 2px 2px 1px #00C8FF; */
+			font-size: 20px;
+		}
+		
+		#nav{
+			float: left;
+			
+		}
+		
+		#filtro{
+			float: right;
+padding-right: 20px;
+		}
+		
+		#detalle{
+			display: none;
+			text-align: center;
+		}
+		
+		#opciones{
+background: #001950;
+    z-index: 1;
+    position: relative;
+    height: 130px;
+    margin-top: -80px;
+	    color: #fff;
+    font-size: 40px;
+		}
+		.opciones{
+/*background: #fff;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    margin: 20px 30px;
+    border: solid 1px #000;*/
+    display: inline-block;
+height: 100px;
+    width: 100px;
+	
+		}
+
+#chat{
+background:url("../images/chat.png") no-repeat;
+}
+
+#llegar{
+background:url("../images/go.png") no-repeat;
+}
+
+#turno{
+background:url("../images/ticket.png") no-repeat;
+}	
+
+#chat:hover{
+background:url("../images/chat_h.png") no-repeat;
+}
+
+#llegar:hover{
+background:url("../images/go_h.png") no-repeat;
+}
+
+#turno:hover{
+background:url("../images/ticket_h.png") no-repeat;
+}	
+	
+		
+		#cont_op{
+			    margin: 0px auto;
+    width: 100%;
+    /*height: 100%;*/
+			
+		}
+		
+		#detalle_info{
+			    width: 80%;
+    margin: 0 auto;
+	border-collapse: collapse;
+	
+		}
+		
+		#detalle_info td {
+       border-bottom: solid 1px gray;
+    vertical-align: middle;
+    border-top: solid 1px gray;
+	text-align: left;
+	padding: 40px;
+}
+
+#detalle_info td span {
+    margin-right: 20px;
+
+}
+
+#table_info{
+	margin: 0 auto;
+	width: auto;
+ 
+}
+
+#table_info td {
+    color: #00C8FF;
+    font-size: 30px;
+padding: 30px;
+}
+
+#table_info td a {
+	text-decoration: none;
+	color: #00C8FF;
+    font-size: 30px;
+}
+
+#head{
+    border-bottom: 1px solid #000;
+    height: auto;
+    width: 100%;
+    position: fixed;
+    z-index: 300;
+    background: #fff;
+    box-shadow: 0 8px 10px -6px #000;
+    top: 0;
+}

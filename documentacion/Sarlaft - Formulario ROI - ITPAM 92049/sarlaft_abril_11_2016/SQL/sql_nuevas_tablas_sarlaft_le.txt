@@ -1,0 +1,300 @@
+--
+-- Creacion de nuevas tablas
+--
+DROP TABLE IF EXISTS `tbl_formulario_fle`;
+CREATE TABLE IF NOT EXISTS `tbl_formulario_fle` (
+  `fle_id` int(10) NOT NULL AUTO_INCREMENT,
+  `fle_radicado` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `fle_empresa_id` int(10) DEFAULT NULL,
+  `fle_clase_id` int(10) DEFAULT NULL,
+  `fle_nombre_persona` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `fle_pais_id` int(10) DEFAULT NULL,
+  `fle_departamento_id` int(10) DEFAULT NULL,
+  `fle_ciudad_id` int(10) DEFAULT NULL,
+  `fle_decision` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fle_canal_id` int(10) DEFAULT NULL,
+  `fle_efectiva` tinyint(1) DEFAULT NULL,
+  `fle_tipo_id` int(10) DEFAULT NULL,
+  `fle_descripcion_consulta` text COLLATE utf8_unicode_ci NOT NULL,
+  `fle_reportante_nombre` varchar(259) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fle_otros_datos_contacto` text COLLATE utf8_unicode_ci,
+  `fle_fecha_ocurrencia` date NOT NULL,
+  `fle_fecha_cierre` date DEFAULT NULL,
+  `fle_accion_id` int(10) DEFAULT NULL,
+  `fle_tiempo_respuesta` int(10) DEFAULT NULL,
+  `fle_traslado_comite` tinyint(1) DEFAULT NULL,
+  `fle_estado_id` int(10) DEFAULT NULL,
+  `fle_usuario` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fle_anio` int(10) DEFAULT NULL,
+  `fle_mes` int(10) DEFAULT NULL,
+  `fle_fecha_reporte` date DEFAULT NULL,
+  `fle_tareas_pendientes` varchar(500) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fle_gestion` varchar(500) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fle_asignacion_id` int(10) DEFAULT NULL,
+  `fle_atencion` varchar(500) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fle_dias_transcurridos` int(10) DEFAULT NULL,
+  `fle_clasificacion_id` int(10) DEFAULT NULL,
+  `fle_ultima_pagina` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fle_lenguaje_inicial` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fle_fecha_ultima_accion` date DEFAULT NULL,
+  `fle_fecha_inicio` date NOT NULL,
+  `fle_prueba` tinyint(1) DEFAULT NULL,
+  `fle_ip` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fle_usuario_id` int(10) DEFAULT NULL,
+  `creadopor` int(10) DEFAULT NULL,
+  `fechacreacion` datetime DEFAULT NULL,
+  `modificadopor` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fechamodificacion` datetime DEFAULT NULL,
+  `fle_visitante` text COLLATE utf8_unicode_ci,
+  PRIMARY KEY (`fle_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+DROP TABLE IF EXISTS `tbl_accion`;
+CREATE TABLE IF NOT EXISTS `tbl_accion` (
+  `acc_id` int(10) NOT NULL AUTO_INCREMENT,
+  `acc_nombre` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `creadopor` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fechacreacion` datetime DEFAULT NULL,
+  `modificadopor` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fechamodificacion` datetime DEFAULT NULL,
+  PRIMARY KEY (`acc_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+DROP TABLE IF EXISTS `tbl_canal`;
+CREATE TABLE IF NOT EXISTS `tbl_canal` (
+  `can_id` int(10) NOT NULL AUTO_INCREMENT,
+  `can_nombre` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `creadopor` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fechacreacion` datetime DEFAULT NULL,
+  `modificadopor` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fechamodificacion` datetime DEFAULT NULL,
+  PRIMARY KEY (`can_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+DROP TABLE IF EXISTS `tbl_clase`;
+CREATE TABLE IF NOT EXISTS `tbl_clase` (
+  `cla_id` int(10) NOT NULL AUTO_INCREMENT,
+  `cla_nombre` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `creadopor` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fechacreacion` datetime DEFAULT NULL,
+  `modificadopor` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fechamodificacion` datetime DEFAULT NULL,
+  PRIMARY KEY (`cla_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+DROP TABLE IF EXISTS `tbl_clasificacion`;
+CREATE TABLE IF NOT EXISTS `tbl_clasificacion` (
+  `cla_id` int(10) NOT NULL AUTO_INCREMENT,
+  `cla_nombre` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `creadopor` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fechacreacion` datetime DEFAULT NULL,
+  `modificadopor` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fechamodificacion` datetime DEFAULT NULL,
+  PRIMARY KEY (`cla_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+DROP TABLE IF EXISTS `tbl_tipo_linea`;
+CREATE TABLE IF NOT EXISTS `tbl_tipo_linea` (
+  `tip_id` int(10) NOT NULL AUTO_INCREMENT,
+  `tip_nombre` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `creadopor` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fechacreacion` datetime DEFAULT NULL,
+  `modificadopor` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fechamodificacion` datetime DEFAULT NULL,
+  PRIMARY KEY (`tip_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+DROP TABLE IF EXISTS `tbl_asignacion`;
+CREATE TABLE IF NOT EXISTS `tbl_asignacion` (
+  `asi_id` int(10) NOT NULL AUTO_INCREMENT,
+  `asi_nombre` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `creadopor` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fechacreacion` datetime DEFAULT NULL,
+  `modificadopor` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fechamodificacion` datetime DEFAULT NULL,
+  PRIMARY KEY (`asi_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+--
+-- Datos nuevos reportes
+--
+INSERT IGNORE INTO `tbl_reports` VALUES (67, 'Reporte Linea Etica', 'Reporte Linea Etica', NULL, NULL, 'tbl_formulario_fle', 'fle_id', NULL, NULL, 1, 1, 1, 99, 1, 1, 0, 0, NULL, 1, 'jcadag', '2015-12-28 08:11:30', 'jcadag', '2015-12-28 08:13:12');
+INSERT IGNORE INTO `tbl_reports` VALUES (68, 'Clases', 'Clases', NULL, NULL, 'tbl_clase', 'cla_id', NULL, NULL, 1, 1, 1, 99, 1, 1, 1, 1, NULL, 1, 'jcadag', '2015-12-28 10:04:33', 'jcadag', '2015-12-28 10:05:49');
+INSERT IGNORE INTO `tbl_reports` VALUES (69, 'Clasificacion', 'Clasificacion', NULL, NULL, 'tbl_clasificacion', 'cla_id', NULL, NULL, 1, 1, 1, 99, 1, 1, 1, 1, NULL, 1, 'jcadag', '2015-12-28 10:12:22', NULL, NULL);
+INSERT IGNORE INTO `tbl_reports` VALUES (70, 'Accion', 'Accion', NULL, NULL, 'tbl_action', 'acc_id', NULL, NULL, 1, 1, 1, 99, 1, 1, 1, 1, NULL, 1, 'jcadag', '2015-12-28 10:14:16', NULL, NULL);
+INSERT IGNORE INTO `tbl_reports` VALUES (71, 'Tipo', 'Tipo', NULL, NULL, 'tbl_tipo_linea', 'tip_id', NULL, NULL, 1, 1, 1, 99, 1, 1, 1, 1, NULL, 1, 'jcadag', '2015-12-28 10:15:58', NULL, NULL);
+INSERT IGNORE INTO `tbl_reports` VALUES (72, 'Canal', 'Canal', NULL, NULL, 'tbl_canal', 'can_id', NULL, NULL, 1, 1, 1, 99, 1, 1, 1, 1, NULL, 1, 'jcadag', '2015-12-28 10:17:24', NULL, NULL);
+INSERT IGNORE INTO `tbl_reports` VALUES (73, 'Asignacion', 'Asignacion', NULL, NULL, 'tbl_asignacion', 'asi_id', NULL, NULL, 1, 1, 1, 99, 1, 1, 1, 1, NULL, 1, 'jcadag', '2015-12-28 10:17:24', NULL, NULL);
+
+
+--
+-- Datos nuevos campos de Reporte Linea Etica
+--
+DELETE FROM `tbl_reports_fields` WHERE report_id = 67;
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fle_nombre_persona', 'fle_nombre_persona', 'Persona', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 7, 190, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-25 01:05:25', 'admin', '2015-4-16 23:45:10');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fle_radicado', 'fle_radicado', 'Radicado', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 1, 120, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-25 01:05:25', 'admin', '2015-4-19 02:38:10');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fle_empresa_id', 'fle_empresa_id', 'Empresa', '', '', 10, '', 'select emp_id, emp_nombre from tbl_empresa', 'emp_id', 'emp_nombre', 0, '', 'tbl_empresa', 'emp_id', 'emp_nombre', 'select emp_id, emp_nombre from tbl_empresa', 'eq', '', 0, 1, '', 0, 0, 2, 100, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-30 11:19:35', 'admin', '2015-4-9 01:34:20');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fle_ciudad_id', 'fle_ciudad_id', 'Ciudad', '', '', 10, '', 'select ciu_id, ciu_nombre from tbl_ciudad', 'ciu_id', 'ciu_nombre', 0, '', 'tbl_ciudad', 'ciu_id', 'ciu_nombre', 'select ciu_id, ciu_nombre from tbl_ciudad', 'eq', '', 0, 1, '', 0, 0, 9, 120, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-30 11:25:34', 'admin', '2015-4-27 11:02:43');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fle_estado_id', 'fle_estado_id', 'Estado', '', '', 10, '', 'select est_id, est_nombre from tbl_estado', 'est_id', 'est_nombre', 0, '', 'tbl_estado', 'est_id', 'est_nombre', 'select est_id, est_nombre from tbl_estado', 'eq', '', 0, 1, '', 0, 0, 0, 100, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-30 11:36:21', 'admin', '2015-4-9 01:34:49');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fle_canal_id', 'fle_canal_id', 'Canal', '', '', 10, '', 'select can_id, can_nombre from tbl_canal', 'can_id', 'can_nombre', 0, '', 'tbl_canal', 'can_id', 'can_nombre', 'select can_id, can_nombre from tbl_canal', 'eq', '', 0, 1, '', 0, 0, 14, 150, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-30 11:49:44', 'admin', '2015-3-30 14:38:02');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fle_fecha_ocurrencia', 'fle_fecha_ocurrencia', 'Fecha ocurrencia', '', 'left', 5, '', '', '', '', 0, '', '', '', '', '', '', '', 0, 1, '', 0, 0, 20, 90, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-30 11:52:16', 'admin', '2015-3-30 14:28:35');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fle_fecha_cierre', 'fle_fecha_cierre', 'Fecha cierre', '', 'left', 5, '', '', '', '', 0, '', '', '', '', '', '', '', 0, 1, '', 0, 0, 21, 90, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-30 14:28:39', '', '0000-0-0 00:00:00');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fle_accion_id', 'fle_accion_id', 'Acción', '', '', 10, '', 'select acc_id, acc_nombre from tbl_accion', 'acc_id', 'acc_nombre', 0, '', 'tbl_accion', 'acc_id', 'acc_nombre', 'select acc_id, acc_nombre from tbl_accion', 'eq', '', 0, 1, '', 0, 0, 22, 150, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-30 14:35:11', '', '0000-0-0 00:00:00');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fle_clasificacion_id', 'fle_clasificacion_id', 'Clasificación', '', '', 10, '', 'select cla_id, cla_nombre from tbl_clasificacion', 'cla_id', 'cla_nombre', 0, '', 'tbl_clasificacion', 'cla_id', 'cla_nombre', 'select cla_id, cla_nombre from tbl_clasificacion', 'eq', '', 0, 1, '', 0, 0, 16, 120, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-30 15:09:29', 'admin', '2015-4-19 21:19:13');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fle_gestion', 'fle_gestion', 'Gestión', '', '', 2, '', '', '', '', 0, '', '', '', '', '', '', '', 0, 1, '', 0, 0, 11, 170, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-30 15:44:32', 'admin', '2015-3-30 16:28:43');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fle_asignacion_id', 'fle_asignacion_id', 'Asignado a', NULL, NULL, 10, NULL, 'select asi_id, asi_nombre from tbl_asignacion', 'asi_id', 'asi_nombre', 0, NULL, 'tbl_asignacion', 'asi_id', 'asi_nombre', 'select asi_id, asi_nombre from tbl_asignacion', 'eq', NULL, 0, 1, NULL, 0, 0, 12, 100, 0, 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, 'admin', '2015-3-30 16:26:45', 'jcadag', '2016-1-4 09:32:35');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fle_descripcion_consulta', 'fle_descripcion_consulta', 'Descripción consulta', '', '', 17, '', '', '', '', 0, '', '', '', '', '', '', '', 0, 1, '', 0, 0, 19, 150, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-30 16:54:09', 'admin', '2015-4-19 21:14:27');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fle_otros_datos_contacto', 'fle_otros_datos_contacto', 'Otros datos contacto', '', '', 17, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 23, 130, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-31 11:39:36', 'admin', '2015-4-19 21:30:06');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fle_pais_id', 'fle_pais_id', 'País', '', '', 10, '', 'select pai_id, pai_nombre from tbl_pais', 'pai_id', 'pai_nombre', 0, '', 'tbl_pais', 'pai_id', 'pai_nombre', 'select pai_id, pai_nombre from tbl_pais', 'eq', '', 0, 1, '', 0, 0, 10, 120, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-4-9 09:09:47', '', '0000-0-0 00:00:00');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fle_departamento_id', 'fle_departamento_id', 'Departamento', '', '', 10, '', 'select dep_id, dep_nombre from tbl_departamento', 'dep_id', 'dep_nombre', 0, '', 'tbl_departamento', 'dep_id', 'dep_nombre', 'select dep_id, dep_nombre from tbl_departamento', 'eq', '', 0, 1, '', 0, 0, 9, 120, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-4-9 09:12:49', 'admin', '2015-4-27 11:06:04');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fle_id', 'fle_id', 'Nombres', '', '', 9, '', 'SELECT per_formulario_id, per_nombre FROM tbl_persona_formulario', 'per_formulario_id', 'per_nombre', 0, '', 'tbl_persona_formulario', 'per_formulario_id', 'per_nombre', 'SELECT per_formulario_id, per_nombre FROM tbl_persona_formulario', 'eq', '', 1, 1, 'per_formulario_id', 1, 0, 2, 200, 0, 1, 0, '', '', '', '', '', '', '', 0, '', 'admin', '2015-4-16 23:41:55', 'admin', '2015-4-17 00:57:41');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fle_decision', 'fle_decision', 'Decisión', '', '', 2, '', '', '', '', 0, '', '', '', '', '', '', '', 0, 1, '', 0, 0, 12, 100, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-4-21 10:12:10', '', '0000-0-0 00:00:00');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fle_tareas_pendientes', 'fle_tareas_pendientes', 'Tareas pendientes', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 26, 190, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-4-21 10:39:54', 'admin', '2015-4-21 11:05:39');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fle_visitante', 'fle_visitante', 'Datos visitante', '', '', 17, '', '', '', '', NULL, '', '', '', '', '', '', '', 0, 1, '', 0, 0, 40, 120, 0, 0, 0, '', '', '', '', '', '', '', 0, '', 'admin', '2015-4-21 12:15:35', '', '0000-0-0 00:00:00');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fechacreacion', 'fechacreacion', 'Fecha registro', '', 'left', 2, '', '', '', '', 0, '', '', '', '', '', '', 'ASC', 0, 1, '', 0, 0, 1, 90, 0, 0, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-4-21 12:41:32', 'admin', '2015-4-21 14:16:42');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fle_reportante_nombre', 'fle_reportante_nombre', 'Nombre completo', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 26, 190, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-4-21 10:39:54', 'admin', '2015-4-21 11:05:39');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fle_clase_id', 'fle_clase_id', 'Clase', '', '', 10, '', 'select cla_id, cla_nombre from tbl_clase', 'cla_id', 'cla_nombre', 0, '', 'tbl_clase', 'cla_id', 'cla_nombre', 'select cla_id, cla_nombre from tbl_clase', 'eq', '', 0, 1, '', 0, 0, 16, 120, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-30 15:09:29', 'admin', '2015-4-19 21:19:13');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fle_tipo_id', 'fle_tipo_id', 'Tipo línea', '', '', 10, '', 'select tip_id, tip_nombre from tbl_tipo_linea', 'tip_id', 'tip_nombre', 0, '', 'tbl_tipo_linea', 'tip_id', 'tip_nombre', 'select tip_id, tip_nombre from tbl_tipo_linea', 'eq', '', 0, 1, '', 0, 0, 16, 120, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-30 15:09:29', 'admin', '2015-4-19 21:19:13');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 67, 'tbl_formulario_fle', 'fle_efectiva', 'fle_efectiva', 'Efectiva', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 7, 190, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-25 01:05:25', 'admin', '2015-4-16 23:45:10');
+
+
+--
+-- Datos nuevos campos de Maestros de Linea Etica
+--
+DELETE FROM `tbl_reports_fields` WHERE report_id = 68;
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 68, 'tbl_clase', 'cla_nombre', 'cla_nombre', 'Clase', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 0, 510, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-25 01:05:25', 'admin', '2015-3-25 02:55:31');
+DELETE FROM `tbl_reports_fields` WHERE report_id = 69;
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 69, 'tbl_clasificacion', 'cla_nombre', 'cla_nombre', 'Clasificacion', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 0, 510, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-25 01:05:25', 'admin', '2015-3-25 02:55:31');
+DELETE FROM `tbl_reports_fields` WHERE report_id = 70;
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 70, 'tbl_action', 'acc_nombre', 'acc_nombre', 'Acción', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 0, 510, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-25 01:05:25', 'admin', '2015-3-25 02:55:31');
+DELETE FROM `tbl_reports_fields` WHERE report_id = 71;
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 71, 'tbl_tipo_linea', 'tip_nombre', 'tip_nombre', 'Tipo', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 0, 510, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-25 01:05:25', 'admin', '2015-3-25 02:55:31');
+DELETE FROM `tbl_reports_fields` WHERE report_id = 72;
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 72, 'tbl_canal', 'can_nombre', 'can_nombre', 'Canal', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 0, 510, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-25 01:05:25', 'admin', '2015-3-25 02:55:31');
+DELETE FROM `tbl_reports_fields` WHERE report_id = 73;
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 73, 'tbl_asignacion', 'asi_nombre', 'asi_nombre', 'Asignación', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 0, 510, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'admin', '2015-3-25 01:05:25', 'admin', '2015-3-25 02:55:31');
+
+
+--
+-- Datos maestro acciones
+--
+INSERT INTO `tbl_accion` VALUES (1, 'Terminación Contractual', 'admin', '2015-12-28 02:15:49', NULL, NULL);
+INSERT INTO `tbl_accion` VALUES (2, 'Denuncia Penal', 'admin', '2015-12-28 02:16:12', NULL, NULL);
+INSERT INTO `tbl_accion` VALUES (3, 'Llamados de atención', 'admin', '2015-12-28 02:16:44', NULL, NULL);
+INSERT INTO `tbl_accion` VALUES (4, 'Cambios en el proceso', 'admin', '2015-12-28 02:17:27', NULL, NULL);
+INSERT INTO `tbl_accion` VALUES (5, 'En proceso disciplinario', 'admin', '2015-12-28 02:17:52', NULL, NULL);
+
+
+--
+-- Datos maestro canales
+--
+INSERT INTO `tbl_canal` VALUES (1, 'Web', 'admin', '2015-12-23 02:19:12', NULL, NULL);
+INSERT INTO `tbl_canal` VALUES (2, '01800', 'admin', '2015-12-23 02:19:44', NULL, NULL);
+INSERT INTO `tbl_canal` VALUES (3, 'Email', 'admin', '2015-12-23 02:20:32', NULL, NULL);
+INSERT INTO `tbl_canal` VALUES (4, 'Directo', 'admin', '2015-12-23 02:21:06', NULL, NULL);
+
+
+--
+-- Datos maestro clases
+--
+INSERT INTO `tbl_clase` VALUES (1, 'Consulta', 'admin', '2015-12-23 02:26:23', NULL, NULL);
+INSERT INTO `tbl_clase` VALUES (2, 'Denuncia', 'admin', '2015-12-23 02:26:23', NULL, NULL);
+INSERT INTO `tbl_clase` VALUES (3, 'PQR', 'admin', '2015-12-23 02:26:23', NULL, NULL);
+INSERT INTO `tbl_clase` VALUES (4, 'Otro', 'admin', '2015-12-23 02:26:23', NULL, NULL);
+
+
+--
+-- Datos maestro clasificaciones
+--
+INSERT INTO `tbl_clasificacion` VALUES (1, 'Etica', 'admin', '2015-12-28 02:13:32', NULL, NULL);
+INSERT INTO `tbl_clasificacion` VALUES (2, 'Otro servicio', 'admin', '2015-12-28 02:14:06', NULL, NULL);
+
+
+--
+-- Datos maestro de tipos
+--
+INSERT INTO `tbl_tipo_linea` VALUES (1, 'Actividad Antimonopolio / Competencia Leal', 'admin', '2015-12-23 02:24:39', NULL, NULL);
+INSERT INTO `tbl_tipo_linea` VALUES (2, 'Auditoría y Contabilidad', 'admin', '2015-12-23 02:24:39', NULL, NULL);
+INSERT INTO `tbl_tipo_linea` VALUES (3, 'Libros y Registros', 'admin', '2015-12-23 02:24:39', NULL, NULL);
+INSERT INTO `tbl_tipo_linea` VALUES (4, 'Soborno y Corrupción', 'admin', '2015-12-23 02:24:39', NULL, NULL);
+INSERT INTO `tbl_tipo_linea` VALUES (5, 'Cumplimiento de las Leyes y Reglamentos', 'admin', '2015-12-23 02:24:39', NULL, NULL);
+INSERT INTO `tbl_tipo_linea` VALUES (6, 'Conflicto de intereses', 'admin', '2015-12-23 02:24:39', NULL, NULL);
+INSERT INTO `tbl_tipo_linea` VALUES (7, 'Discriminación o acoso', 'admin', '2015-12-23 02:24:39', NULL, NULL);
+INSERT INTO `tbl_tipo_linea` VALUES (8, 'Regalos y Entretenimiento', 'admin', '2015-12-23 02:24:39', NULL, NULL);
+INSERT INTO `tbl_tipo_linea` VALUES (9, 'Salud, Seguridad y Medio Ambiente', 'admin', '2015-12-23 02:24:39', NULL, NULL);
+INSERT INTO `tbl_tipo_linea` VALUES (10, 'Robo', 'admin', '2015-12-23 02:24:39', NULL, NULL);
+INSERT INTO `tbl_tipo_linea` VALUES (11, 'Condiciones de trabajo inseguras', 'admin', '2015-12-23 02:24:39', NULL, NULL);
+INSERT INTO `tbl_tipo_linea` VALUES (12, 'Otro / Servicio', 'admin', '2015-12-23 02:24:39', NULL, NULL);
+INSERT INTO `tbl_tipo_linea` VALUES (13, 'Otro', 'admin', '2015-12-23 02:24:39', NULL, NULL);
+
+
+--
+-- Datos maestro de asignaciones
+--
+INSERT INTO `tbl_asignacion` VALUES (1, 'Relaciones Laborales UNE', 'admin', '2015-12-28 02:13:32', NULL, NULL);
+INSERT INTO `tbl_asignacion` VALUES (2, 'Control Fraudes', 'admin', '2015-12-28 02:14:06', NULL, NULL);
+INSERT INTO `tbl_asignacion` VALUES (3, 'Relaciones laborales Emtelco', 'admin', '2015-12-28 02:13:32', NULL, NULL);
+INSERT INTO `tbl_asignacion` VALUES (4, 'Cultura y Cambio', 'admin', '2015-12-28 02:14:06', NULL, NULL);
+INSERT INTO `tbl_asignacion` VALUES (5, 'Servicio al Cliente Tigo', 'admin', '2015-12-28 02:13:32', NULL, NULL);
+INSERT INTO `tbl_asignacion` VALUES (6, 'Servicio al cliente UNE', 'admin', '2015-12-28 02:14:06', NULL, NULL);
+INSERT INTO `tbl_asignacion` VALUES (7, 'Servicio al Cliente Edatel', 'admin', '2015-12-28 02:13:32', NULL, NULL);
+INSERT INTO `tbl_asignacion` VALUES (8, 'Comité de Convivencia', 'admin', '2015-12-28 02:14:06', NULL, NULL);
+
+
+--
+-- Asignacion de permisos para roles en reportes
+--
+DELETE FROM `tbl_reports_permissions_roles` WHERE report_id = 68;
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL, 68, 'superadminsarlaft', 1, 1, 1, 1, 1, 1, 1, 1, 'jcadag', '2016-1-12 00:23:18', 'jcadag', '2016-1-12 00:23:33');
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL, 68, 'administrador', 1, 1, 1, 1, 1, 1, 1, 1, 'jcadag', '2016-1-12 00:24:42', 'jcadag', '2016-1-12 00:24:54');
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL, 68, 'autorizado', 1, 0, 0, 0, 1, 1, 1, 1, 'jcadag', '2016-1-12 00:25:47', 'jcadag', '2016-1-12 00:25:56');
+
+DELETE FROM `tbl_reports_permissions_roles` WHERE report_id = 69;
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL, 69, 'superadminsarlaft', 1, 1, 1, 1, 1, 1, 1, 1, 'jcadag', '2016-1-12 00:23:18', 'jcadag', '2016-1-12 00:23:33');
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL, 69, 'administrador', 1, 1, 1, 1, 1, 1, 1, 1, 'jcadag', '2016-1-12 00:24:42', 'jcadag', '2016-1-12 00:24:54');
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL, 69, 'autorizado', 1, 0, 0, 0, 1, 1, 1, 1, 'jcadag', '2016-1-12 00:25:47', 'jcadag', '2016-1-12 00:25:56');
+
+DELETE FROM `tbl_reports_permissions_roles` WHERE report_id = 70;
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL, 70, 'superadminsarlaft', 1, 1, 1, 1, 1, 1, 1, 1, 'jcadag', '2016-1-12 00:23:18', 'jcadag', '2016-1-12 00:23:33');
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL, 70, 'administrador', 1, 1, 1, 1, 1, 1, 1, 1, 'jcadag', '2016-1-12 00:24:42', 'jcadag', '2016-1-12 00:24:54');
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL, 70, 'autorizado', 1, 0, 0, 0, 1, 1, 1, 1, 'jcadag', '2016-1-12 00:25:47', 'jcadag', '2016-1-12 00:25:56');
+
+DELETE FROM `tbl_reports_permissions_roles` WHERE report_id = 71;
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL, 71, 'superadminsarlaft', 1, 1, 1, 1, 1, 1, 1, 1, 'jcadag', '2016-1-12 00:23:18', 'jcadag', '2016-1-12 00:23:33');
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL, 71, 'administrador', 1, 1, 1, 1, 1, 1, 1, 1, 'jcadag', '2016-1-12 00:24:42', 'jcadag', '2016-1-12 00:24:54');
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL, 71, 'autorizado', 1, 0, 0, 0, 1, 1, 1, 1, 'jcadag', '2016-1-12 00:25:47', 'jcadag', '2016-1-12 00:25:56');
+
+DELETE FROM `tbl_reports_permissions_roles` WHERE report_id = 72;
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL, 72, 'superadminsarlaft', 1, 1, 1, 1, 1, 1, 1, 1, 'jcadag', '2016-1-12 00:23:18', 'jcadag', '2016-1-12 00:23:33');
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL, 72, 'administrador', 1, 1, 1, 1, 1, 1, 1, 1, 'jcadag', '2016-1-12 00:24:42', 'jcadag', '2016-1-12 00:24:54');
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL, 72, 'autorizado', 1, 0, 0, 0, 1, 1, 1, 1, 'jcadag', '2016-1-12 00:25:47', 'jcadag', '2016-1-12 00:25:56');
+
+DELETE FROM `tbl_reports_permissions_roles` WHERE report_id = 73;
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL, 73, 'superadminsarlaft', 1, 1, 1, 1, 1, 1, 1, 1, 'jcadag', '2016-1-12 00:23:18', 'jcadag', '2016-1-12 00:23:33');
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL, 73, 'administrador', 1, 1, 1, 1, 1, 1, 1, 1, 'jcadag', '2016-1-12 00:24:42', 'jcadag', '2016-1-12 00:24:54');
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL, 73, 'autorizado', 1, 0, 0, 0, 1, 1, 1, 1, 'jcadag', '2016-1-12 00:25:47', 'jcadag', '2016-1-12 00:25:56');
+
+DELETE FROM `tbl_reports_permissions_roles` WHERE report_id = 74;
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL, 74, 'superadminsarlaft', 1, 1, 1, 1, 1, 1, 1, 1, 'jcadag', '2016-1-12 00:23:18', 'jcadag', '2016-1-12 00:23:33');
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL, 74, 'administrador', 1, 1, 1, 1, 1, 1, 1, 1, 'jcadag', '2016-1-12 00:24:42', 'jcadag', '2016-1-12 00:24:54');
+INSERT INTO `tbl_reports_permissions_roles` VALUES (NULL, 74, 'autorizado', 1, 0, 0, 0, 1, 1, 1, 1, 'jcadag', '2016-1-12 00:25:47', 'jcadag', '2016-1-12 00:25:56');
+
+
+--
+-- Datos nuevos campos de Reporte de Estados
+--
+DELETE FROM `tbl_reports_fields` WHERE report_id = 53;
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 53, 'tbl_estado', 'est_nombre', 'est_nombre', 'Estado', '', '', 2, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 0, 510, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'jcadag', '2015-3-25 01:05:25', 'jcadag', '2015-3-25 02:55:31');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 53, 'tbl_estado', 'est_roi', 'est_roi', 'ROI', '', '', 3, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 14, 100, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'jcadag', '2015-3-25 01:05:25', '', '');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 53, 'tbl_estado', 'est_lineaetica', 'est_lineaetica', 'Línea Ética', '', '', 3, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 14, 100, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'jcadag', '2015-3-25 01:05:25', '', '');
+INSERT INTO `tbl_reports_fields` VALUES (NULL, 53, 'tbl_estado', 'est_conflicto', 'est_conflicto', 'Conflicto de Intereses', '', '', 3, '', '', '', '', 0, '', '', '', '', '', 'eq', '', 0, 1, '', 0, 0, 14, 100, 0, 1, 0, '', '', '', '', '', '', '', 1, '', 'jcadag', '2015-3-25 01:05:25', '', '');
+
+
+--
+-- Nuevos campos maestro de estados
+--
+ALTER TABLE `tbl_estado` ADD `est_roi` TINYINT NOT NULL DEFAULT '1' AFTER `est_nombre` ,
+ADD `est_lineaetica` TINYINT NOT NULL DEFAULT '1' AFTER `est_roi` ,
+ADD `est_conflicto` TINYINT NOT NULL DEFAULT '1' AFTER `est_lineaetica`;
+
