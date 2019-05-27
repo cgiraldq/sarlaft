@@ -203,9 +203,9 @@
 		<div><a href="http://www.tigo-une.com/compliance/wp-content/uploads/2015/04/ManualConflicto-de-Intereses2.pdf" target="_blank">Click aquí para ver el manual</a></div>-->
 
 				<br />
-		<!--<div align="justify"><b>Un Conflicto de Intereses</b>, hace referencia a toda situación en la que los intereses personales, directos o indirectos, de los miembros de la Junta Directiva, de la administración o de los colaboradores de TigoUne o sus familiares, <b>pueden estar enfrentados con los de la Compañía</b>, o en alguna medida <b>interfieren con sus deberes</b> y motivan un actuar contrario al recto cumplimiento de sus obligaciones laborales. Estas situaciones en las que se contraponen los intereses personales a los intereses organizacionales, <b>pueden llegar a generar un beneficio económico, político o comercial a una de las partes</b>, ocasionando un desequilibrio con la otra, o incluso pueden llegar a generar una <b>falta de integridad</b> en la(s) compañía(s); afectando la <b>transparencia, equidad y responsabilidad</b> organizacional.</div>-->
+		<!--<div align="justify"><b>Un Conflicto de Intereses</b>, hace referencia a toda situación en la que los intereses personales, directos o indirectos, de los miembros de la Junta Directiva, de la administración o de los colaboradores de Tigo o sus familiares, <b>pueden estar enfrentados con los de la Compañía</b>, o en alguna medida <b>interfieren con sus deberes</b> y motivan un actuar contrario al recto cumplimiento de sus obligaciones laborales. Estas situaciones en las que se contraponen los intereses personales a los intereses organizacionales, <b>pueden llegar a generar un beneficio económico, político o comercial a una de las partes</b>, ocasionando un desequilibrio con la otra, o incluso pueden llegar a generar una <b>falta de integridad</b> en la(s) compañía(s); afectando la <b>transparencia, equidad y responsabilidad</b> organizacional.</div>-->
 		
-		<div align="justify">En TigoUne llevar a cabo reuniones con Funcionarios de Gobierno plantea un riesgo significativo de Cumplimiento. Por esta razón, es importante documentar el relacionamiento con Funcionarios de Gobierno y asegurar que cualquier reunión se realice de conformidad con el Código de Ética de TigoUne, la Política Anticorrupción y Antisoborno, y las demás políticas de Ética y Cumplimiento. 
+		<div align="justify">En Tigo llevar a cabo reuniones con Funcionarios de Gobierno plantea un riesgo significativo de Cumplimiento. Por esta razón, es importante documentar el relacionamiento con Funcionarios de Gobierno y asegurar que cualquier reunión se realice de conformidad con el Código de Ética de Tigo, la Política Anticorrupción y Antisoborno, y las demás políticas de Ética y Cumplimiento. 
 
 <br><br>Principio de los cuatro (4) ojos<br>
 En las negociaciones estamos representados por al menos dos personas para garantizar la transparencia y al efectividad del proceso.
@@ -381,7 +381,7 @@ Te invitamos a conocer la Política de interacción con funcionarios públicos y
 	<div class="row"><a href="javascript:;" onclick="addElement();">Adicionar Participante Entidad</a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="javascript:;" onclick="removeElement();">Remover Participante</a></div>
 	<br /><br>
 	
-	<b>Participante por parte de TigoUne y/o tercero actuando en nombre y/o representación de tigoune.</b>
+	<b>Participante por parte de Tigo y/o tercero actuando en nombre y/o representación de Tigo.</b>
 	
 						<br><br><div class="row">
 		<label for="ifp_nombre">Nombre</label>
@@ -401,14 +401,14 @@ Te invitamos a conocer la Política de interacción con funcionarios públicos y
 	
 	<input type="hidden" value="0" id="contador2" />
 	<div id="otrasPersonas2"></div>
-	<div class="row"><a href="javascript:;" onclick="addElement2();">Adicionar Participante TigoUne</a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="javascript:;" onclick="removeElement2();">Remover Participante</a></div>
+	<div class="row"><a href="javascript:;" onclick="addElement2();">Adicionar Participante Tigo</a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="javascript:;" onclick="removeElement2();">Remover Participante</a></div>
 	<br /><br><br>
 	
 	<div class="row">
 			<?php echo $form->labelEx($model,'ifp_proposito'); ?><br><br>
 		<input type="checkbox" name="ifp_proposito[]" value="Corresponde a un Proyecto nuevo o existente" />&nbsp;Corresponde a un Proyecto nuevo o existente.<br>
 <input type="checkbox" name="ifp_proposito[]"  value="Corresponde a Asuntos Legales o Regulatorios"/>&nbsp;Corresponde a Asuntos Legales o Regulatorios.<br>
-<input type="checkbox" name="ifp_proposito[]" value="Explicación y/o Ventas de servicios de TigoUne"/>&nbsp;Explicación y/o Ventas de servicios de TigoUne.<br>
+<input type="checkbox" name="ifp_proposito[]" value="Explicación y/o Ventas de servicios de Tigo"/>&nbsp;Explicación y/o Ventas de servicios de Tigo.<br>
 <input type="checkbox" name="ifp_proposito[]" value="Corresponde a compra de servicio" />&nbsp;Corresponde a compra de servicio.<br>
 <input id="otro" type="checkbox" name="ifp_proposito[]" value="Otro"/>&nbsp;Otro.<br><br>
  <input id="otro_text" type="text" placeholder="¿Cual Otro?" />

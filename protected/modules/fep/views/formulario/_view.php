@@ -9,6 +9,7 @@ echo "</pre>";*/
 	$correo='eventosypatrocinios@tigoune.com';				
 				
 	  //$correo="Cristian.C.Giraldo@asesor.une.com.co";
+//$correo="cristian.giraldo90@gmail.com";
 
 $host = '200.13.249.167';
 $user = 'registroune@une.net.co';
@@ -48,7 +49,7 @@ if($this->sincifrar($model->fep_email)!=""){
 		}
   </style>
   </head><div><table width="50%" align="center"><tr><td><img src="images/header-bg-fep.jpg" ></td></tr>
-<tr><td class="sombra">Hola, Te confirmamos que la solicitud realizada a través del <b>Formulario de Eventos y Patrocinios de TigoUne</b>, ha sido 
+<tr><td class="sombra">Hola, Te confirmamos que la solicitud realizada a través del <b>Formulario de Eventos y Patrocinios de Tigo</b>, ha sido 
 recibida correctamente por el área de Eventos y Patrocinios con radicado  No.<b>'. $model->fep_radicado.'</b>.  
 <br><br>Prontamente te estaremos dando respuesta.</td></tr></table></div></body></html>';
 //$mail->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
@@ -112,7 +113,7 @@ $mail2->Subject    = "Solicitud Eventos y Patrocinios";
 //$mail->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
 $mail2->MsgHTML($body2);
 $address2 = $correo;
-$mail2->AddAddress($address2, "Eventos y Patrocinios TigoUne");
+$mail2->AddAddress($address2, "Eventos y Patrocinios Tigo");
 
 
 $mail2->Send();

@@ -18,7 +18,7 @@ $mail->SMTPAuth   = false;
 $mail->Username   = $user; // SMTP account username
 $mail->Password   = $pass;        // SMTP account password
 $mail->SetFrom("Noreplytigo@TigoUne.com", 'Código de Conducta de Proveedores');
-$mail->Subject  = "Adhesión del Código de Conducta de Proveedores TigoUne.";
+$mail->Subject  = "Adhesión del Código de Conducta de Proveedores Tigo.";
 
 
 
@@ -47,7 +47,7 @@ $mail->Subject  = "Adhesión del Código de Conducta de Proveedores TigoUne.";
 <table border="1" width="80%" align="center"><tr><td colspan="2"><b>Radicado: '. $model->ccp_radicado.'</b></td><td>Fecha de Registro: '.$model->fechacreacion.'</td></tr>
 <tr><td><b>Razón Social:</b></td><td>'.$this->sincifrar($model->ccp_razon_social).'</td><td><b>Identificación:</b> '.$this->sincifrar($model->ccp_nit).'</td></tr>
 <tr><td><b>Fecha dediligenciamiento:</b></td><td colspan="2">'. $model->fechacreacion.'</td></tr>
-<tr><td><b>Descripción de la solicitud:</b></td><td colspan="2">En mi calidad de representante legal, certifico y garantizo la lectura, comprensión y acatamiento de las prácticas descritas en este Código de Conducta de Proveedores, así como he sido informado por TigoUne sobre la obligación de cumplir las normas relacionadas con la prevención del Soborno Transnacional y que conozco el programa de Ética Empresarial y las consecuencias de infringirlo. <b>'.$model->ccp_certifica.'</b></td></tr>
+<tr><td><b>Descripción de la solicitud:</b></td><td colspan="2">En mi calidad de representante legal, certifico y garantizo la lectura, comprensión y acatamiento de las prácticas descritas en este Código de Conducta de Proveedores, así como he sido informado por Tigo sobre la obligación de cumplir las normas relacionadas con la prevención del Soborno Transnacional y que conozco el programa de Ética Empresarial y las consecuencias de infringirlo. <b>'.$model->ccp_certifica.'</b></td></tr>
 <tr><td><b>Observaciones:</b></td><td colspan="2">'.$this->sincifrar($model->ccp_observaciones).'</td></tr>
 </table>
 </td></tr></table></div></body></html>';

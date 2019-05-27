@@ -64,7 +64,7 @@ Se ha hecho un comentario por parte del usuario <b>'.$_REQUEST["user"].'</b>, mi
 //$mail->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
 $mail2->MsgHTML($body2);
 $address2 = $correo;
-$mail2->AddAddress($address2, "Eventos y Patrocinios TigoUne");
+$mail2->AddAddress($address2, "Eventos y Patrocinios Tigo");
 
 
 $mail2->Send();

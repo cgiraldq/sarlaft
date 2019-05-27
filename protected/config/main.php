@@ -130,7 +130,7 @@ return array(
 			'password' => DB_PASS,
 			'charset' => 'utf8',
 		),		
-		  /*'cache'=>array(
+		  'cache'=>array(
                 'class'=>'system.caching.CMemCache',
                 'servers'=>array(
                                array(
@@ -159,7 +159,7 @@ return array(
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
-		),*/
+		),
             
 		'log'=>array(
             'class'=>'CLogRouter',
@@ -169,7 +169,7 @@ return array(
 					'class' => 'CFileLogRoute',
 					'levels'=>'info',
 					'categories'=>'system.*, application.*',
-					'logPath' => $_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR."sarlaft/sarlaft".DIRECTORY_SEPARATOR.'logs'.DIRECTORY_SEPARATOR,
+					'logPath' => $_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.'archivos'.DIRECTORY_SEPARATOR.'logs'.DIRECTORY_SEPARATOR,
 					'logFile' => 'info',
                 ), 
  

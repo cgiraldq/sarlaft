@@ -166,11 +166,11 @@
 		<div><a href="http://www.tigo-une.com/compliance/wp-content/uploads/2015/04/ManualConflicto-de-Intereses2.pdf" target="_blank">Click aquí para ver el manual</a></div>-->
 
 				<br />
-		<!--<div align="justify"><b>Un Conflicto de Intereses</b>, hace referencia a toda situación en la que los intereses personales, directos o indirectos, de los miembros de la Junta Directiva, de la administración o de los colaboradores de TigoUne o sus familiares, <b>pueden estar enfrentados con los de la Compañía</b>, o en alguna medida <b>interfieren con sus deberes</b> y motivan un actuar contrario al recto cumplimiento de sus obligaciones laborales. Estas situaciones en las que se contraponen los intereses personales a los intereses organizacionales, <b>pueden llegar a generar un beneficio económico, político o comercial a una de las partes</b>, ocasionando un desequilibrio con la otra, o incluso pueden llegar a generar una <b>falta de integridad</b> en la(s) compañía(s); afectando la <b>transparencia, equidad y responsabilidad</b> organizacional.</div>-->
+		<!--<div align="justify"><b>Un Conflicto de Intereses</b>, hace referencia a toda situación en la que los intereses personales, directos o indirectos, de los miembros de la Junta Directiva, de la administración o de los colaboradores de Tigo o sus familiares, <b>pueden estar enfrentados con los de la Compañía</b>, o en alguna medida <b>interfieren con sus deberes</b> y motivan un actuar contrario al recto cumplimiento de sus obligaciones laborales. Estas situaciones en las que se contraponen los intereses personales a los intereses organizacionales, <b>pueden llegar a generar un beneficio económico, político o comercial a una de las partes</b>, ocasionando un desequilibrio con la otra, o incluso pueden llegar a generar una <b>falta de integridad</b> en la(s) compañía(s); afectando la <b>transparencia, equidad y responsabilidad</b> organizacional.</div>-->
 		
 		<div align="justify">El soborno consiste en ofrecer, prometer, dar, aceptar o solicitar una contraprestación económica o de otro tipo, con el fin de obtener ventaja de índole comercial, contractual, reglamentaria o personal.<br><br>            
 
-En TigoUne estamos comprometidos con un actuar ético y transparente ante nuestros grupos de interés, por ello promovemos la gestión de la Compañía bajo la filosofía de la Cero Tolerancia, evitando actos que contraríen los principios organizacionales.<br><br>
+En Tigo estamos comprometidos con un actuar ético y transparente ante nuestros grupos de interés, por ello promovemos la gestión de la Compañía bajo la filosofía de la Cero Tolerancia, evitando actos que contraríen los principios organizacionales.<br><br>
                                                                                                                                               
 Te invitamos a conocer la Política de Anticorrupción y Antisoborno, y a realizar la siguiente declaración.<br><br>
 
@@ -296,7 +296,7 @@ Te invitamos a conocer la Política de Anticorrupción y Antisoborno, y a realiz
 			</div>
 <br>	<br>	
 				
-			<div>¿Tienes alguna relación contractual directa o indirecta en negocios que te relacionan, de alguna manera, con TigoUne?   </div>
+			<div>¿Tienes alguna relación contractual directa o indirecta en negocios que te relacionan, de alguna manera, con Tigo?   </div>
 		
 	<input type="radio"  name="justi3" id="sijusti3" value="si" <?php echo $chkd_certifica; ?> /> SI 
 			 &nbsp; &nbsp; &nbsp; 

@@ -26,27 +26,27 @@ li{color: #000;}
 		echo '<div class="errorSummary">'.$msjauth.'</div>';
 		
 	?>
-		<!--<div align="justify"><b>Un Conflicto de Intereses</b>, hace referencia a toda situaci&oacute;n en la que los intereses personales, directos o indirectos, de los miembros de la Junta Directiva, de la administraci&oacute;n o de los colaboradores de TigoUne o sus familiares, <b>pueden estar enfrentados con los de la Compañ&iacute;a</b>, o en alguna medida <b>interfieren con sus deberes</b> y motivan un actuar contrario al recto cumplimiento de sus obligaciones laborales. Estas situaciones en las que se contraponen los intereses personales a los intereses organizacionales, <b>pueden llegar a generar un beneficio econ&oacute;mico, pol&iacute;tico o comercial a una de las partes</b>, ocasionando un desequilibrio con la otra, o incluso pueden llegar a generar una <b>falta de integridad</b> en la(s) compañ&iacute;a(s); afectando la <b>transparencia, equidad y responsabilidad</b> organizacional.</div>-->
+		<!--<div align="justify"><b>Un Conflicto de Intereses</b>, hace referencia a toda situaci&oacute;n en la que los intereses personales, directos o indirectos, de los miembros de la Junta Directiva, de la administraci&oacute;n o de los colaboradores de Tigo o sus familiares, <b>pueden estar enfrentados con los de la Compañ&iacute;a</b>, o en alguna medida <b>interfieren con sus deberes</b> y motivan un actuar contrario al recto cumplimiento de sus obligaciones laborales. Estas situaciones en las que se contraponen los intereses personales a los intereses organizacionales, <b>pueden llegar a generar un beneficio econ&oacute;mico, pol&iacute;tico o comercial a una de las partes</b>, ocasionando un desequilibrio con la otra, o incluso pueden llegar a generar una <b>falta de integridad</b> en la(s) compañ&iacute;a(s); afectando la <b>transparencia, equidad y responsabilidad</b> organizacional.</div>-->
 		
 		<br />
 		<table width="98%" border="0" cellspacing="1" cellpadding="1"><tbody><tr><td width="50%" align="left"><div><?php setlocale(LC_ALL,"es_ES"); echo utf8_encode(ucfirst(strftime("%A %d de %B del %Y"))); ?></div></td><td width="50%" align="right" style="text-align:right !important;"><a href="index.php?r=fep/formulario/create&logout_user=1">Cerrar sesi&oacute;n</a></td></tr></tbody></table>
 		
-		Por favor diligencia la siguiente información con los datos de la entidad, con el cual se pretende orientar  la participación en eventos y patrocinios por parte de TigoUne y sus filiales; con el objetivo de tomar decisiones legales, éticas y transparentes. 
+		Por favor diligencia la siguiente información con los datos de la entidad, con el cual se pretende orientar  la participación en eventos y patrocinios por parte de Tigo y sus filiales; con el objetivo de tomar decisiones legales, éticas y transparentes. 
 <br><br>
-<span id="texto_peq"><b>TigoUne solo participa en eventos y patrocinios académicos, culturales, deportivos, artísticas o sociales organizados por la compañia y/o un tercero; siempre y cuando la finalidad del evento o patrocinio sea impactar positivamente a nuestros grupos de interés y fortalecer el posicionamiento de las marcas.
+<span id="texto_peq"><b>Tigo solo participa en eventos y patrocinios académicos, culturales, deportivos, artísticas o sociales organizados por la compañia y/o un tercero; siempre y cuando la finalidad del evento o patrocinio sea impactar positivamente a nuestros grupos de interés y fortalecer el posicionamiento de las marcas.
 
 <br>No patrocina: <br>
 <ul>
 <li>Eventos donde exista una interacción directa con animales, como por ejemplo: Corridas de toros, exposiciones de animales y corralejas, entre otros. </li>
 <li> Eventos políticos: campañas políticas y/o apoyo a candidatos. </li>
 <li> Eventos que estén enmarcados en algún tipo de creencia religiosa. </li>
-<li> Eventos en donde el nombre de TigoUne, se asocie directamente con la promoción y/o el consumo de licores, bebidas alcohólicas, tabaco, sustancias psicoactivas.</li> 
+<li> Eventos en donde el nombre de Tigo, se asocie directamente con la promoción y/o el consumo de licores, bebidas alcohólicas, tabaco, sustancias psicoactivas.</li> 
 <li> No se patrocinan eventos o actividades de colegios y/o universidades que no contemplen una estrategia comercial y académica.</li>
 <li> No se patrocina ningún tipo de equipo o actividad deportiva y/o cultural no profesional. Ej. equipo de fútbol de un colegio, un barrio, grupo de danzas y teatro, entre otros.</li>
 <li> No se patrocina, ni se participa en ningún tipo de evento que promueva la violencia o violación de los derechos humanos. </li>
-<li> No se patrocina eventos o actividades que se desarrollen en lugares donde TigoUne no tenga cobertura propia o a través de sus filiales.</li>
+<li> No se patrocina eventos o actividades que se desarrollen en lugares donde Tigo no tenga cobertura propia o a través de sus filiales.</li>
 </ul>
-TigoUne está comprometida con los más altos estándares de transparencia y ética empresarial, por esta razón coloca a su disposición el formulario de Eventos y Patrocinios.
+Tigo está comprometida con los más altos estándares de transparencia y ética empresarial, por esta razón coloca a su disposición el formulario de Eventos y Patrocinios.
 </b></span>
 <br><br><a target="_blank" href="http://tigo-une.com/compliancetigoune/wp-content/pdf/politica-de-eventos-y-patrocinios.pdf">Click aquí para conocer nuestra política</a> 
 

@@ -21,7 +21,7 @@ $formatos_validos = str_replace(',','|',$row_parametros[0]['par_formatos_validos
 
 	<br />
 	<div align="justify">
-	Bienvenidos a la Línea Ética de TigoUne. Este es un canal confidencial dispuesto para que usted  pueda realizar consultas o informar situaciones que incumplan o sean contrarias con la ética de nuestra compañía y que están relacionadas con:</div>
+	Bienvenidos a la Línea Ética de Tigo. Este es un canal confidencial dispuesto para que usted  pueda realizar consultas o informar situaciones que incumplan o sean contrarias con la ética de nuestra compañía y que están relacionadas con:</div>
 	<br />
 		
 	<div>

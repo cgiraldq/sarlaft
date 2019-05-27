@@ -200,8 +200,8 @@ class Formulario extends CActiveRecord {
 			 'fep_tipo_publico' => 'Tipo de público al que va dirigido la solicitud',
 			 'fep_numero_patrocinadores' => 'Número de patrocinadores',
 			 'fep_patrocinadores' => 'Indicar patrocinadores',
-			 'fep_grupo_interes' => '¿ El destinatario del evento/patrocinio hace parte de algún grupo de interés de TigoUne (accionista, cliente, proveedor, aliado, entre otros)?',
-			 'fep_patrocinios_anteriores' => '¿ Ha recibido el destinatario patrocinios de TigoUne o Millicom anteriormente?',
+			 'fep_grupo_interes' => '¿ El destinatario del evento/patrocinio hace parte de algún grupo de interés de Tigo (accionista, cliente, proveedor, aliado, entre otros)?',
+			 'fep_patrocinios_anteriores' => '¿ Ha recibido el destinatario patrocinios de Tigo o Millicom anteriormente?',
 			 'fep_info_adicional' => 'Adjuntar Archivos ',
 			 'fep_soporte_inventario' => 'Adjuntar Soporte inventario',
 			

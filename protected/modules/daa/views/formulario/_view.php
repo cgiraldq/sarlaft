@@ -46,7 +46,7 @@ $mail->Subject    = "Declaración Anticorrupción y Antisoborno";
 <tr><td><b>Persona que Declara: </b>&nbsp;&nbsp;&nbsp;'.$this->sincifrar($model->daa_nombre).'</td><td><b>Identificación: </b>'.$model->daa_identificacion.'</td></tr>
 <tr><td><b>Ha ofrecido sobornos?:</b>&nbsp;'. $model->daa_has_ofrecido.'</td><td><b>Justificación:&nbsp;</b>'. $model->daa_just_has_ofre.'</td></tr>
 <tr><td><b>Le han ofrecido soborno?:</b>&nbsp;'. $model->daa_te_han_ofrecido.'</td><td><b>Justificación:&nbsp;</b>'. $model->daa_just_han_ofre.'</td></tr>
-<tr><td><b>Ha tenido relación con algún negocio con TigoUne?:</b>'. $model->daa_relacion_tigoune.'</td><td><b>Justificación:&nbsp;</b>'. $model->daa_just_rela_tigoune.'</td></tr>
+<tr><td><b>Ha tenido relación con algún negocio con Tigo?:</b>'. $model->daa_relacion_tigoune.'</td><td><b>Justificación:&nbsp;</b>'. $model->daa_just_rela_tigoune.'</td></tr>
 </table>
 </td></tr></table></div></body></html>';
 //echo $body;die;

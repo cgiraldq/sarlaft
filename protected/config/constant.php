@@ -3,17 +3,16 @@
 define('SITENAME','Sarlaft');
 define('PASSWORD_APP','sarlaft2015');
 define('APPLICATION','Sarlaft');
-//define('INSTANCE','10.158.117.84');
-define('INSTANCE','localhost');
+define('INSTANCE','10.158.117.84');
 define('DB','dbsarlaft');
-define('DB_USER','cgiraldq');
-define('DB_PASS','08108217');
+define('DB_USER','usersaft');
+define('DB_PASS','5d6ea7b49ff23f501272eb219b867e05');
 //profile path
 define('DIRPATH', $_SERVER['DOCUMENT_ROOT']); 
 define('AVATARPATH','/archivos/multimedia/profiles/pics/');
-define('PATH_UPLOAD_REGISTROS');
+define('PATH_UPLOAD_REGISTROS', DIRPATH.AVATARPATH);
 define('ARCHIVOSPATH','/archivos/');
-define('PATH_UPLOAD_ARCHIVOS');
+define('PATH_UPLOAD_ARCHIVOS', DIRPATH.ARCHIVOSPATH);
 //COPYRIGHT
 define('COPYRIGHT', 'UNE TELECOMUNICACIONES');
 //massdataupload

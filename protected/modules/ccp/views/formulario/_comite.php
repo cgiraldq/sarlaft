@@ -79,7 +79,7 @@ $rs_ciudad = Ciudad::model()->findByPk($model->fep_ciudad_id);
 		
 	?>
 
-		<!--<div align="justify"><b>Un Conflicto de Intereses</b>, hace referencia a toda situaci&oacute;n en la que los intereses personales, directos o indirectos, de los miembros de la Junta Directiva, de la administraci&oacute;n o de los colaboradores de TigoUne o sus familiares, <b>pueden estar enfrentados con los de la Compañ&iacute;a</b>, o en alguna medida <b>interfieren con sus deberes</b> y motivan un actuar contrario al recto cumplimiento de sus obligaciones laborales. Estas situaciones en las que se contraponen los intereses personales a los intereses organizacionales, <b>pueden llegar a generar un beneficio econ&oacute;mico, pol&iacute;tico o comercial a una de las partes</b>, ocasionando un desequilibrio con la otra, o incluso pueden llegar a generar una <b>falta de integridad</b> en la(s) compañ&iacute;a(s); afectando la <b>transparencia, equidad y responsabilidad</b> organizacional.</div>-->
+		<!--<div align="justify"><b>Un Conflicto de Intereses</b>, hace referencia a toda situaci&oacute;n en la que los intereses personales, directos o indirectos, de los miembros de la Junta Directiva, de la administraci&oacute;n o de los colaboradores de Tigo o sus familiares, <b>pueden estar enfrentados con los de la Compañ&iacute;a</b>, o en alguna medida <b>interfieren con sus deberes</b> y motivan un actuar contrario al recto cumplimiento de sus obligaciones laborales. Estas situaciones en las que se contraponen los intereses personales a los intereses organizacionales, <b>pueden llegar a generar un beneficio econ&oacute;mico, pol&iacute;tico o comercial a una de las partes</b>, ocasionando un desequilibrio con la otra, o incluso pueden llegar a generar una <b>falta de integridad</b> en la(s) compañ&iacute;a(s); afectando la <b>transparencia, equidad y responsabilidad</b> organizacional.</div>-->
 		
 		<br />
 		<table width="98%" border="0" cellspacing="1" cellpadding="1"><tbody><tr><td width="50%" align="left"><div><?php setlocale(LC_ALL,"es_ES"); echo utf8_encode(ucfirst(strftime("%A %d de %B del %Y"))); ?></div></td><td width="50%" align="right" style="text-align:right !important;"><a href="<?php echo 'index.php?r=fep/formulario/create&logout_user=1&id='.$_GET["id"].'"'?>>Cerrar sesi&oacute;n</a></td></tr></tbody></table>
@@ -129,8 +129,8 @@ $rs_ciudad = Ciudad::model()->findByPk($model->fep_ciudad_id);
 	<tr><td><b>Tipo de Público:</b>&nbsp;&nbsp;'.$model->fep_tipo_publico.'</td><td><b>Número de Patrocinadores:</b>&nbsp;&nbsp;'.$model->fep_numero_patrocinadores.'</td></tr>
 	<tr><td><b>Patrocinadores:</b></td><td>'.$model->fep_patrocinadores.'</td></tr>
 	<tr id="titulo"><th width="100%" align="center" colspan="2" ><h4>Declaración</h4></th></tr>
-	<tr><td width="60%"><b>¿ El destinatario del evento/patrocinio hace parte de algún grupo de interés de TigoUne (accionista, cliente, proveedor, aliado, entre otros)?</b></td><td>'.$model->fep_grupo_interes.'</td></tr>
-	<tr><td width="60%"><b>¿ Ha recibido el destinatario patrocinios de TigoUne o Millicom anteriormente?</b></td><td>'.$model->fep_patrocinios_anteriores.'</td></tr>
+	<tr><td width="60%"><b>¿ El destinatario del evento/patrocinio hace parte de algún grupo de interés de Tigo (accionista, cliente, proveedor, aliado, entre otros)?</b></td><td>'.$model->fep_grupo_interes.'</td></tr>
+	<tr><td width="60%"><b>¿ Ha recibido el destinatario patrocinios de Tigo o Millicom anteriormente?</b></td><td>'.$model->fep_patrocinios_anteriores.'</td></tr>
 	<tr id="titulo"><td  align="center"  colspan="2"><h4>Información Adicional</h4></td></tr>
 	<tr><td colspan="2">'.$fieldValue.'</td></tr>
 	<tr id="titulo"><td  align="center"  colspan="2"><h4>Inventario</h4></td></tr>
